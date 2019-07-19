@@ -1,0 +1,1000 @@
+{
+  "info": {
+    "name": "Camunda Rest API",
+    "_postman_id": "f884fcdb-e178-4563-961b-fcca3d1787da",
+    "description": "TODO: Add Description",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "name": "/deployment",
+      "description": "",
+      "item": [
+        {
+          "id": "91576c50-24d8-4531-b270-92bb2f93359d",
+          "name": "DeploymentCreatePost",
+          "request": {
+            "url": "http://example.com/deployment/create",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "deployment-name",
+                  "value": "deployment-name1",
+                  "disabled": false,
+                  "type": "text"
+                },
+                {
+                  "key": "enable-duplicate-filtering",
+                  "value": "true",
+                  "disabled": false,
+                  "type": "text"
+                },
+                {
+                  "key": "deploy-changed-only",
+                  "value": "true",
+                  "disabled": false,
+                  "type": "text"
+                },
+                {
+                  "key": "pay_taxes.bpmn",
+                  "value": "pay_taxes.bpmn1",
+                  "disabled": false,
+                  "type": "text"
+                },
+                {
+                  "key": "smsBody.js",
+                  "value": "smsBody.js1",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": "Create a Camunda Deployment.\n\nUpdate the Deployment Name and Key/Value of the .bpmn file in the Body."
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "11cb29e8-c611-4ca4-b785-d54f527c8fa0"
+            }
+          ]
+        },
+        {
+          "id": "c61b5cd6-acc8-4d42-b39c-bfce6bdd2c95",
+          "name": "ProcessInstance3fde771b9aed11e792b20242ac110002Get",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-instance/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "2f35e2bd-6a60-499f-acb2-8039863595b2"
+            }
+          ]
+        },
+        {
+          "id": "73ea0a19-07d2-4592-9a02-ebb0cb858fb8",
+          "name": "ProcessInstanceGet",
+          "request": {
+            "url": "http://example.com/process-instance",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "b20053ee-90ec-41f4-8f21-f6fcc612fae7"
+            }
+          ]
+        },
+        {
+          "id": "0b23f37a-f2dc-41f6-9c0f-f82c947c5802",
+          "name": "Deployment051e15ae99b411e792b20242ac110002Get",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "deployment/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "47442ec5-75db-4e0a-bebc-b2ae5e09ef06"
+            }
+          ]
+        },
+        {
+          "id": "456254ab-4674-446d-ae91-a3f999549ea8",
+          "name": "DeploymentGet",
+          "request": {
+            "url": "http://example.com/deployment",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "d609ab83-1ef4-469d-b956-83bead639665"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "description": "",
+      "item": [
+        {
+          "id": "e40a8fc9-d815-48d4-a2bf-8b4215003aa7",
+          "name": "Task8f9d8732968d11e7B2330242ac110002Put",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "task/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Review Tax Submission\",\r\n  \"assignee\": \"Individual:d0daa7e4-07d1-47e6-93f2-0629adaa3b49\"\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "9cb2d987-5182-4ebe-831b-d8fe6d7bcae6"
+            }
+          ]
+        },
+        {
+          "id": "fc9afb32-71b4-4f49-a7d5-94a1f5ebf869",
+          "name": "TaskD7e3213e968611e7B2330242ac110002CompletePost",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "task/:id/complete"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Body0\": \"Body4\"\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "5b20d20e-af64-4739-9960-df38f0cc8829"
+            }
+          ]
+        },
+        {
+          "id": "178ecd7d-8591-4b6e-b325-d72aecb6a4cc",
+          "name": "TaskGet",
+          "request": {
+            "url": "http://example.com/task",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "09804797-e734-4d7c-8065-da03aa42be46"
+            }
+          ]
+        },
+        {
+          "id": "7ccab11b-b631-472e-8795-e7ea59e2cc4b",
+          "name": "TaskPost",
+          "request": {
+            "url": "http://example.com/task",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\"\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "3d47f0d0-a6ae-4aad-95c0-3fe4ced3b974"
+            }
+          ]
+        },
+        {
+          "id": "6e59123c-a184-40b2-9032-903ab4fb551e",
+          "name": "Task3fde9e439aed11e792b20242ac110002VariablesGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "task/:id/variables"
+              ],
+              "query": [
+                {
+                  "key": "deserializeValues",
+                  "value": "true",
+                  "disabled": false
+                }
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "3ff54cae-9e32-4727-a56a-77c8e6830550"
+            }
+          ]
+        },
+        {
+          "id": "652aab66-04b4-474c-b445-a80766cbb38b",
+          "name": "TaskCreatePost",
+          "request": {
+            "url": "http://example.com/task/create",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0f\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\": 30,\r\n  \"assignee\": \"Staff:47a5a9cb-496f-4db7-8999-489ec404887f\",\r\n  \"owner\": null,\r\n  \"delegationState\": \"PENDING\",\r\n  \"due\": \"2014-08-30T10:00:00\",\r\n  \"followUp\": \"2014-08-25T10:00:00\",\r\n  \"tenantId\": null\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "8152c0d2-6811-47b5-860c-7fda6783fa56"
+            }
+          ]
+        },
+        {
+          "id": "56c9cdf3-9b51-4e83-beb4-e0e8e1564c95",
+          "name": "Task8f9d8732968d11e7B2330242ac110002Get",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "task/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "92f91f69-fea6-46fb-b90c-2c39c8cf89d2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Process Definition",
+      "description": "",
+      "item": [
+        {
+          "id": "6f3232cd-2484-477f-8fef-7f36b5f5111a",
+          "name": "ProcessDefinitionGet",
+          "request": {
+            "url": "http://example.com/process-definition",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "e8b80245-49f4-48b9-ab7a-c4082ec7845d"
+            }
+          ]
+        },
+        {
+          "id": "8ea88028-b9dd-4de4-8d3b-e19638547d0b",
+          "name": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StartFormGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/:id/startForm"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "c9dad3bf-dd72-4b82-b994-979c2ff714e2"
+            }
+          ]
+        },
+        {
+          "id": "d7ebe222-96c8-43fa-9618-bacb5c436f52",
+          "name": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StatisticsGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/:id/statistics"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "e729a909-6403-4508-b2e5-c49378914051"
+            }
+          ]
+        },
+        {
+          "id": "c02c6338-c7dd-4320-9263-b96137b71371",
+          "name": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StatisticsGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "a35af219-ff3d-444e-b754-3ec4619a0fee"
+            }
+          ]
+        },
+        {
+          "id": "d1798b11-9e88-49d6-95d0-a21e45f306df",
+          "name": "ProcessDefinitionPayTaxes1608cd76b9e4e11e7B8b70242ac110002Delete",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "58779830-faa7-4442-a0db-c6541e72013c"
+            }
+          ]
+        },
+        {
+          "id": "d2ff67fb-4cc0-45fd-a5eb-304453930a94",
+          "name": "ProcessDefinitionKeyPayTaxesXmlGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/key/:key/xml"
+              ],
+              "variable": [
+                {
+                  "id": "key",
+                  "value": "key1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "57f913a6-1b07-4165-9b40-b9720b0d76ca"
+            }
+          ]
+        },
+        {
+          "id": "7a5a4014-e7ef-46af-8abb-795356c03a2d",
+          "name": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002DiagramGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/:id/diagram"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "4ef7fffc-e733-41fb-ae89-98479bae1eb5"
+            }
+          ]
+        },
+        {
+          "id": "475aa48b-023a-4c80-96d8-2d7e01655a52",
+          "name": "ProcessDefinitionKeyPayTaxesStartFormGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/key/:key/startForm"
+              ],
+              "variable": [
+                {
+                  "id": "key",
+                  "value": "key1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "b927162c-080e-497c-a366-78a63eb38ab7"
+            }
+          ]
+        },
+        {
+          "id": "99d74ace-97d9-46b4-9d82-98234851ced9",
+          "name": "ProcessDefinitionKeyPayTaxesStartPost",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-definition/key/:key/start"
+              ],
+              "variable": [
+                {
+                  "id": "key",
+                  "value": "key1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"variables\": {\r\n    \"invoiceNumber\": {\r\n      \"value\": \"invoice 1\",\r\n      \"type\": \"string\"\r\n    },\r\n    \"amount\": {\r\n      \"value\": 30,\r\n      \"type\": \"integer\"\r\n    },\r\n    \"creditor\": {\r\n      \"value\": \"Creditor 1\",\r\n      \"type\": \"string\"\r\n    },\r\n    \"invoiceCategory\": {\r\n      \"value\": \"Category 1\",\r\n      \"type\": \"string\"\r\n    },\r\n    \"approverGroups\": {\r\n      \"value\": true,\r\n      \"type\": \"boolean\"\r\n    }\r\n  }\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "4060beec-e026-4c2f-89eb-eaf0b130ebd9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Process Instance",
+      "description": "",
+      "item": [
+        {
+          "id": "ed7b2312-8a68-4aa5-b010-14eaf55ea402",
+          "name": "ProcessInstance3fde771b9aed11e792b20242ac110002VariablesGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "process-instance/:id/variables"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "fb69ccbf-6d92-49b5-9659-68917cb2d0d6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Groups",
+      "description": "",
+      "item": [
+        {
+          "id": "08866070-4f66-4ca4-81bd-8a3c76197bdb",
+          "name": "GroupGet",
+          "request": {
+            "url": "http://example.com/group",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "3ad9919e-8e70-490b-ad83-1786ea0d924e"
+            }
+          ]
+        },
+        {
+          "id": "b9b1324c-e290-4590-8abb-0be91cfc6ba3",
+          "name": "GroupCreatePost",
+          "request": {
+            "url": "http://example.com/group/create",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "Accept1",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "Content-Type1",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n  \"name\": \"Public Works\",\r\n  \"type\": \"Business Unit\"\r\n}",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "ec85b74a-981d-4e8a-b3ce-036d8fae22c7"
+            }
+          ]
+        },
+        {
+          "id": "6143f608-46ec-453b-a6f4-46c33a23d1b2",
+          "name": "Group8454c987Cbc54a24Ba1aD420283caabdGet",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "example.com",
+              "path": [
+                "group/:id"
+              ],
+              "variable": [
+                {
+                  "id": "id",
+                  "value": "id1",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "TODO: Add Description"
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "1d3d5216-7d05-4e44-a604-fd7b480f387e"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": []
+}

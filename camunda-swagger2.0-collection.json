@@ -1,0 +1,1237 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Camunda Rest API",
+    "description": "TODO: Add Description",
+    "contact": {}
+  },
+  "host": "example.com",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/deployment/create": {
+      "post": {
+        "description": "Create a Camunda Deployment.\n\nUpdate the Deployment Name and Key/Value of the .bpmn file in the Body.",
+        "summary": "DeploymentCreatePost",
+        "tags": [
+          "/deployment"
+        ],
+        "operationId": "DeploymentCreatePost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "deployment-name",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "enable-duplicate-filtering",
+            "in": "formData",
+            "required": true,
+            "type": "boolean"
+          },
+          {
+            "name": "deploy-changed-only",
+            "in": "formData",
+            "required": true,
+            "type": "boolean"
+          },
+          {
+            "name": "pay_taxes.bpmn",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "smsBody.js",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-instance/{id}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessInstance3fde771b9aed11e792b20242ac110002Get",
+        "tags": [
+          "/deployment"
+        ],
+        "operationId": "ProcessInstanceByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-instance": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessInstanceGet",
+        "tags": [
+          "/deployment"
+        ],
+        "operationId": "ProcessInstanceGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/deployment/{id}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Deployment051e15ae99b411e792b20242ac110002Get",
+        "tags": [
+          "/deployment"
+        ],
+        "operationId": "DeploymentByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/deployment": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "DeploymentGet",
+        "tags": [
+          "/deployment"
+        ],
+        "operationId": "DeploymentGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/task/{id}": {
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "Task8f9d8732968d11e7B2330242ac110002Put",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskByIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/~1task~1%7Bid%7Drequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Task8f9d8732968d11e7B2330242ac110002Get",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/task/{id}/complete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "TaskD7e3213e968611e7B2330242ac110002CompletePost",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskCompleteByIdPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/task": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "TaskGet",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "TaskPost",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/~1taskrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/task/{id}/variables": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Task3fde9e439aed11e792b20242ac110002VariablesGet",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskVariablesByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "deserializeValues",
+            "in": "query",
+            "required": true,
+            "type": "boolean"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/task/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "TaskCreatePost",
+        "tags": [
+          "Tasks"
+        ],
+        "operationId": "TaskCreatePost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/~1task~1createrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/{id}/startForm": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StartFormGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionStartFormByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/{id}/statistics": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StatisticsGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionStatisticsByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/{id}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002StatisticsGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionPayTaxes1608cd76b9e4e11e7B8b70242ac110002Delete",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionByIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/key/{key}/xml": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionKeyPayTaxesXmlGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionKeyXmlByKeyGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/{id}/diagram": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionPayTaxes50520118099b411e792b20242ac110002DiagramGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionDiagramByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/key/{key}/startForm": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionKeyPayTaxesStartFormGet",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionKeyStartFormByKeyGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-definition/key/{key}/start": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessDefinitionKeyPayTaxesStartPost",
+        "tags": [
+          "Process Definition"
+        ],
+        "operationId": "ProcessDefinitionKeyStartByKeyPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/~1process-definition~1key~1%7Bkey%7D~1start-request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/process-instance/{id}/variables": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "ProcessInstance3fde771b9aed11e792b20242ac110002VariablesGet",
+        "tags": [
+          "Process Instance"
+        ],
+        "operationId": "ProcessInstanceVariablesByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/group": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "GroupGet",
+        "tags": [
+          "Groups"
+        ],
+        "operationId": "GroupGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/group/create": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "GroupCreatePost",
+        "tags": [
+          "Groups"
+        ],
+        "operationId": "GroupCreatePost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/~1group~1createrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/group/{id}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Group8454c987Cbc54a24Ba1aD420283caabdGet",
+        "tags": [
+          "Groups"
+        ],
+        "operationId": "GroupByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "/group/createrequest": {
+      "title": "/group/createrequest",
+      "example": {
+        "id": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+        "name": "Public Works",
+        "type": "Business Unit"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "type"
+      ]
+    },
+    "/task/createrequest": {
+      "title": "/task/createrequest",
+      "example": {
+        "id": "2b18bc01-a02b-4b54-9bff-2259cb421d0f",
+        "name": "Review something!",
+        "description": "This have to be done very urgent",
+        "priority": 30,
+        "assignee": "Staff:47a5a9cb-496f-4db7-8999-489ec404887f",
+        "owner": null,
+        "delegationState": "PENDING",
+        "due": "2014-08-30T10:00:00",
+        "followUp": "2014-08-25T10:00:00",
+        "tenantId": null
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "assignee": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "delegationState": {
+          "type": "string"
+        },
+        "due": {
+          "type": "string"
+        },
+        "followUp": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "priority",
+        "assignee",
+        "owner",
+        "delegationState",
+        "due",
+        "followUp",
+        "tenantId"
+      ]
+    },
+    "ApproverGroups": {
+      "title": "ApproverGroups",
+      "example": {
+        "value": true,
+        "type": "boolean"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    },
+    "Amount": {
+      "title": "Amount",
+      "example": {
+        "value": 30,
+        "type": "integer"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    },
+    "InvoiceCategory": {
+      "title": "InvoiceCategory",
+      "example": {
+        "value": "Category 1",
+        "type": "string"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    },
+    "/process-definition/key/{key}/start-request": {
+      "title": "/process-definition/key/{key}/start-request",
+      "example": {
+        "variables": {
+          "invoiceNumber": {
+            "value": "invoice 1",
+            "type": "string"
+          },
+          "amount": {
+            "value": 30,
+            "type": "integer"
+          },
+          "creditor": {
+            "value": "Creditor 1",
+            "type": "string"
+          },
+          "invoiceCategory": {
+            "value": "Category 1",
+            "type": "string"
+          },
+          "approverGroups": {
+            "value": true,
+            "type": "boolean"
+          }
+        }
+      },
+      "type": "object",
+      "properties": {
+        "variables": {
+          "$ref": "#/definitions/Variables"
+        }
+      },
+      "required": [
+        "variables"
+      ]
+    },
+    "Creditor": {
+      "title": "Creditor",
+      "example": {
+        "value": "Creditor 1",
+        "type": "string"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    },
+    "InvoiceNumber": {
+      "title": "InvoiceNumber",
+      "example": {
+        "value": "invoice 1",
+        "type": "string"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    },
+    "/taskrequest": {
+      "title": "/taskrequest",
+      "example": {
+        "candidateGroup": "8454c987-cbc5-4a24-ba1a-d420283caabd"
+      },
+      "type": "object",
+      "properties": {
+        "candidateGroup": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "candidateGroup"
+      ]
+    },
+    "/task/{id}request": {
+      "title": "/task/{id}request",
+      "example": {
+        "name": "Review Tax Submission",
+        "assignee": "Individual:d0daa7e4-07d1-47e6-93f2-0629adaa3b49"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "assignee": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "assignee"
+      ]
+    },
+    "Variables": {
+      "title": "Variables",
+      "example": {
+        "invoiceNumber": {
+          "value": "invoice 1",
+          "type": "string"
+        },
+        "amount": {
+          "value": 30,
+          "type": "integer"
+        },
+        "creditor": {
+          "value": "Creditor 1",
+          "type": "string"
+        },
+        "invoiceCategory": {
+          "value": "Category 1",
+          "type": "string"
+        },
+        "approverGroups": {
+          "value": true,
+          "type": "boolean"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "invoiceNumber": {
+          "$ref": "#/definitions/InvoiceNumber"
+        },
+        "amount": {
+          "$ref": "#/definitions/Amount"
+        },
+        "creditor": {
+          "$ref": "#/definitions/Creditor"
+        },
+        "invoiceCategory": {
+          "$ref": "#/definitions/InvoiceCategory"
+        },
+        "approverGroups": {
+          "$ref": "#/definitions/ApproverGroups"
+        }
+      },
+      "required": [
+        "invoiceNumber",
+        "amount",
+        "creditor",
+        "invoiceCategory",
+        "approverGroups"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "/deployment",
+      "description": ""
+    },
+    {
+      "name": "Tasks",
+      "description": ""
+    },
+    {
+      "name": "Process Definition",
+      "description": ""
+    },
+    {
+      "name": "Process Instance",
+      "description": ""
+    },
+    {
+      "name": "Groups",
+      "description": ""
+    }
+  ]
+}
